@@ -96,6 +96,10 @@ p {
     width: 100%;
 }
 
+.main-header div {
+    height: max(2rem, 1.5vw);
+}
+
 .header-logo {
     display: flex;
     align-items: center;
@@ -242,6 +246,10 @@ button:hover {
         margin-right: var(--side-margin);
         padding: .5rem;
         display: flex;
+    }
+
+    .main-header div {
+        height: auto;
     }
 
     .hamburger:hover {
