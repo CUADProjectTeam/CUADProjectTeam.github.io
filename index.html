@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="styles.css" rel="stylesheet">
     <link href="about.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const root = document.querySelector(':root');
+            const headerColor = getComputedStyle(root).getPropertyValue('--header');
+
+            function updateHeaderOpacity() {
+                const scrollPosition = window.scrollY;
+                const windowWidth = window.innerWidth
+                const maxScroll = windowWidth < 900 ? 300 : windowWidth * .1;
+                const opacity = scrollPosition <= maxScroll ? (scrollPosition / maxScroll) ** 3 : 1;
+
+                document.querySelector('.header-logo').style.opacity = opacity;
+
+                const rgbaColor = headerColor.startsWith('rgba') ? headerColor : `rgba(${parseRGB(headerColor)}, 1)`;
+                root.style.setProperty("--header", `${rgbaColor.substring(0, rgbaColor.lastIndexOf(',') + 1).trim()} ${opacity})`)
+            }
+
+            updateHeaderOpacity()
+            window.addEventListener('scroll', updateHeaderOpacity);
+            window.addEventListener('resize', updateHeaderOpacity);
+        });</script>
 
     <title>CUAD</title>
+    <script src="script.js"></script>
     <link rel="icon" type="favicon" href="/images/CUAD_Logo_Favicon.png">
 
 
@@ -26,7 +46,7 @@
         </a>
         <nav class="main-nav">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a class="smooth-scroll" href="#about">About</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><button class="apply-button" href="apply.html">Apply</button></li>
@@ -37,30 +57,25 @@
     <div class="home-img-container">
         <img class="home-background" src="images/drone_home.png">
         <div class="home-logo-container">
-            <img class="home-logo" src="images/CUAD_Logo.png">
+            <img class="home-logo" src="images/CUAD_Logo_OG.png">
             <caption>Exploring the future of robotics
             </caption>
         </div>
     </div>
 
-    <div id="about" class="container">
+    <div id="about" class="container home">
         <section class="about-section">
             <img src="images/about-img.jpg">
             <div class="about-info">
-                <div>
-                    <h1>About Us</h1>
-                    <p>Founded in 2017, we are a team focused on building both controlled and autonomous drones to
-                        compete
-                        in the International
-                        Aerial Robotics Competition. The primary purpose of the IARC is to move the state-of-the-art in
-                        aerial robotics forward
-                        through the creation of significant and useful mission challenges that are considered
-                        'impossible'
-                        at the time that they
-                        are proposed. Through competing in these competitions students gain real life experience for
-                        future
-                        success in industry.</p>
-                </div>
+                <h1>About Us</h1>
+                <p>Founded in 2017, we are a team focused on building both controlled and autonomous drones to compete
+                    in the International
+                    Aerial Robotics Competition. The primary purpose of the IARC is to move the state-of-the-art in
+                    aerial robotics forward
+                    through the creation of significant and useful mission challenges that are considered 'impossible'
+                    at the time that they
+                    are proposed. Through competing in these competitions students gain real life experience for future
+                    success in industry.</p>
                 <div class="about-boxes">
                     <div class="about-box">
                         <h2>Community</h2>

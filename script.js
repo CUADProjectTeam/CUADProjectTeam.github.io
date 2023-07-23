@@ -1,23 +1,22 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const root = document.querySelector(':root');
-    const headerColor = getComputedStyle(root).getPropertyValue('--header');
 
-    function updateHeaderOpacity() {
-        const scrollPosition = window.scrollY;
-        const windowWidth = window.innerWidth
-        const maxScroll = windowWidth < 900 ? 300 : windowWidth * .1;
-        const opacity = scrollPosition <= maxScroll ? (scrollPosition / maxScroll) ** 3 : 1;
+document.addEventListener("DOMContentLoaded", function () {
+    const smoothScrollLinks = document.querySelectorAll(".smooth-scroll");
 
-        document.querySelector('.header-logo').style.opacity = opacity;
+    smoothScrollLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const target = this.getAttribute("href");
+            const samePage = target.startsWith("#");
+            console.log(samePage)
 
-        const rgbaColor = headerColor.startsWith('rgba') ? headerColor : `rgba(${parseRGB(headerColor)}, 1)`;
-        root.style.setProperty("--header", `${rgbaColor.substring(0, rgbaColor.lastIndexOf(',') + 1).trim()} ${opacity})`)
-    }
-
-    function parseRGB(colorString) {
-        return colorString.match(/\d+/g).join(', ');
-    }
-    updateHeaderOpacity()
-    window.addEventListener('scroll', updateHeaderOpacity);
-    window.addEventListener('resize', updateHeaderOpacity);
+            if (samePage) {
+                const targetElement = document.querySelector(target);
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                });
+            } else {
+                window.location.href = target;
+            }
+        });
+    });
 });

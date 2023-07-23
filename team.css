@@ -1,0 +1,34 @@
+.subteam {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.subteam img {
+    max-width: 45vw;
+    margin: 2rem var(--header-spacing);
+}
+
+.subteam div {
+    margin: auto var(--header-spacing);
+}
+
+.right {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 1000px) {
+    .subteam {
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .subteam img {
+        max-width: 100vw;
+    }
+
+    .left {
+        flex-direction: column-reverse;
+    }
+}

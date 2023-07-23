@@ -16,6 +16,11 @@
     --header-spacing: max(1rem, 1.5vw);
 }
 
+html {
+    /* scroll-behavior: smooth; */
+    scroll-padding-top: var(--header-size);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -28,8 +33,13 @@ body {
 }
 
 .container {
+    margin-top: var(--header-size);
     padding-left: var(--side-margin);
     padding-right: var(--side-margin);
+}
+
+.home {
+    margin-top: 0 !important;
 }
 
 h1 {
@@ -134,11 +144,8 @@ p {
 /* Footer */
 
 .main-footer {
-    /* z-index: 1; */
     margin: auto;
     width: 100%;
-    /* position: relative;
-    bottom: 0; */
     text-align: center;
     background-color: var(--secondary);
 }

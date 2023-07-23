@@ -3,7 +3,6 @@
     height: min(60vw, 100vh);
     overflow: clip;
     position: relative;
-    /* transform: translateY(calc(-1 * var(--header-size))); */
     top: 0;
 }
 
@@ -24,14 +23,14 @@
 
 .home-logo {
     width: 15vw;
-    transform: translateX(-1.2vw);
+    transform: translate(-1.2vw, .75vw);
 }
 
 
 
 
 .about-section {
-    padding-top: 40px;
+    padding-top: max(20px, 1.5vw);
     padding-bottom: 40px;
     display: flex;
     flex-direction: row;
@@ -75,7 +74,6 @@
     .home-background {
         position: absolute;
         height: 110vh;
-        /* min-width: 1vw; */
         width: auto;
         right: -30vh;
         transform: translateY(0)
@@ -92,7 +90,7 @@
 
     .home-logo {
         width: 20vh;
-        transform: translateX(-1.2vh);
+        transform: translate(-1.2vh, .75vh);
     }
 
 
