@@ -21,6 +21,14 @@
 
                 const rgbaColor = headerColor.startsWith('rgba') ? headerColor : `rgba(${parseRGB(headerColor)}, 1)`;
                 root.style.setProperty("--header", `${rgbaColor.substring(0, rgbaColor.lastIndexOf(',') + 1).trim()} ${opacity})`)
+
+
+
+                const backgroundImg = document.querySelector('.home-background');
+                const computedStyle = getComputedStyle(backgroundImg);
+                const variableValue = computedStyle.getPropertyValue('--offset');
+
+                backgroundImg.style.setProperty('--offset', `${scrollPosition / 2}px`);
             }
 
             updateHeaderOpacity()
@@ -41,17 +49,20 @@
 <body>
 
     <header class="main-header">
-        <a href="/" class="header-logo">
+        <a href="#" class="header-logo">
             <img src="images/CUAD_Logo.png">
         </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a class="smooth-scroll" href="#about">About</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><button class="apply-button" onclick="window.location.href = 'apply.html';">Apply</button></li>
-            </ul>
-        </nav>
+        <div>
+            <button class="hamburger" onclick="handleDropdown()"><img src="images/hamburger.svg"></button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="#about">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><button class="apply-button" onclick="window.location.href = 'apply.html';">Apply</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="home-img-container">

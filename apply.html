@@ -21,17 +21,20 @@
 <body>
 
     <header class="main-header">
-        <a href="/" class="header-logo">
+        <a href="#" class="header-logo">
             <img src="images/CUAD_Logo.png">
         </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><button class="apply-button" onclick="window.location.href = 'apply.html';">Apply</button></li>
-            </ul>
-        </nav>
+        <div>
+            <button class="hamburger" onclick="handleDropdown()"><img src="images/hamburger.svg"></button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="/#about">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><button class="apply-button" onclick="window.location.href = 'apply.html';">Apply</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
 
@@ -41,6 +44,7 @@
         </p>
         <div class="apply-here">
             <h2>Applications Due Sep 28, 11:59PM!</h2>
+            <h3>For non-freshmen, aplications are due Aug 31.</h3>
             <button class="application-button" onclick="window.location.href = 'www.example.com'">Fall 2023
                 Application</button>
         </div>
@@ -63,7 +67,8 @@
                                 out to us at <a class="footer-email"
                                     href="mailto:cuautodrone@gmail.com">cuautodrone@gmail.com</a>
                                 <br>
-                                Dates are
+                                Dates are TBD
+                                <br>Project Team Fest is Thursday, Aug 31 from 4:00-7:00pm
                             </p>
                         </div>
                     </li>
@@ -71,7 +76,11 @@
                         <img src="images/timeline.svg">
                         <div>
                             <h3>Application Due</h3>
-                            <p>Applications are due on , unfortunately, this is a strict deadline and we cannot accept
+                            <p>Applications are due on Thursday Sep 28 at 11:59PM, Thursday Aug 31 for non-freshmen,
+                                unfortunately, this is a
+                                strict
+                                deadline and
+                                we cannot accept
                                 late
                                 submissions.</p>
                         </div>
@@ -83,14 +92,16 @@
                             <p>Subteams will reach out to select applicants to conduct interviews over the following
                                 weeks,
                                 interviews may be in-person
-                                or on Zoom</p>
+                                or on Zoom. You will receive an interview request through your Cornell email.</p>
                         </div>
                     </li>
                     <li>
                         <img src="images/timeline.svg">
                         <div>
                             <h3>Decisions Released</h3>
-                            <p>Final decisions are released on the </p>
+                            <p>Final decisions are released on Monday, Oct 16. Then, you will have 48 hours to respond
+                                to
+                                an offer.</p>
                         </div>
                     </li>
                 </ul>
