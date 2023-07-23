@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Frank+Ruhl+Libre&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --side-margin: 40px;
+    --header-size: 65px;
+    --background: #F0F0F0;
+    --secondary: #dedede;
+    --header: rgba(222, 222, 222, 1);
+    --logo-red: #b41c1b;
+    --header-spacing: max(1rem, 1.5vw);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Expletus Sans', cursive;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding-left: var(--side-margin);
+    padding-right: var(--side-margin);
+}
+
+h1 {
+    font-size: max(3rem, 2vw);
+    margin: 1rem;
+    margin-bottom: .25rem;
+}
+
+h2 {
+    font-size: max(1.75rem, 1.25vw);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Frank Ruhl Libre', serif;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+
+/* Header */
+
+.main-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-size);
+    background: var(--header);
+    font-size: max(1.2rem, 1vw);
+    z-index: 1;
+    width: 100%;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    padding-left: var(--side-margin);
+}
+
+.header-logo img {
+    height: calc(var(--header-size) - 2px);
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+.main-nav {
+    float: right;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-right: var(--side-margin);
+    vertical-align: middle;
+}
+
+.main-nav a {
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    padding-right: var(--header-spacing);
+    vertical-align: middle;
+}
+
+.main-nav a:hover {
+    color: #4b4b4b;
+    text-decoration: none;
+}
+
+.apply-button {
+    background-color: var(--logo-red);
+    color: #F4F4F4;
+    font-family: 'Expletus Sans', cursive;
+    border-radius: 13px;
+    border-width: 0;
+    font-size: max(1.2rem, 1vw);
+    height: max(2rem, 1.5vw);
+    width: max(90px, 4.5vw);
+}
+
+.apply-button:hover {
+    background-color: hsl(0, 74%, 44%);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Footer */
+
+.main-footer {
+    /* z-index: 1; */
+    margin: auto;
+    width: 100%;
+    /* position: relative;
+    bottom: 0; */
+    text-align: center;
+    background-color: var(--secondary);
+}
+
+.footer-name {
+    font-size: x-large;
+    padding-top: 10px;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.main-footer ul {
+    display: inline-flex;
+    list-style-type: none;
+    vertical-align: middle;
+    margin: 10px
+}
+
+.main-footer ul>li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fa {
+    font-size: 30px !important;
+    color: #000000 !important;
+}
+
+.fa:hover {
+    font-size: 30px !important;
+    color: #717171 !important;
+}
+
+.footer-contact {
+    font-size: medium;
+    font-family: 'Frank Ruhl Libre', serif;
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+
+.footer-email {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-email:hover {
+    color: #b41c1b;
+}
+
+
+.footer-copyright {
+    background-color: #313131;
+    padding: 5px;
+    font-size: small;
+    color: #656565;
+}
