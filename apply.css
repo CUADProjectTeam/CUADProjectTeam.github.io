@@ -1,0 +1,108 @@
+.apply-here {
+    margin-top: 4rem;
+}
+
+.application-button {
+    width: 400px;
+    height: 80px;
+    border-radius: 13px;
+    font-size: xx-large;
+    margin: 2rem;
+}
+
+.application-button:hover {
+    background-color: var(--red-hover);
+    color: #ffffff;
+}
+
+.recruitment-timeline {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    margin-top: 4rem;
+}
+
+span {
+    height: 40px;
+    width: 5px;
+    background-color: #FECC01;
+    border-radius: 99px;
+    margin: 0 20px;
+}
+
+.timeline hr {
+    border: 5px solid #313131;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.timeline ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.timeline li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 22vw;
+    transform: translateY(-5px);
+}
+
+.timeline li>div>p {
+    text-align: left;
+    word-break: break-word;
+}
+
+
+.faqs {
+    margin-top: 4rem;
+}
+
+
+@media (max-width: 1200px) {
+    .timeline hr {
+        display: hidden;
+        border: 0px solid #313131;
+    }
+
+    .timeline ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        justify-content: space-evenly;
+        border-left: 10px solid #313131;
+        border-radius: 5px;
+    }
+
+    .timeline li {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        transform: translateX(-5px);
+    }
+
+    .timeline li>img {
+        transform: rotate(90deg);
+    }
+
+    .timeline li>div {
+        margin-left: 2rem;
+        text-align: left;
+    }
+
+    .timeline li>div>p {
+        margin-left: 0;
+    }
+
+    .timeline li>div>h3 {
+        margin: 0;
+    }
+}

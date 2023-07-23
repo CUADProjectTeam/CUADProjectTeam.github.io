@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Frank+Ruhl+Libre&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Frank+Ruhl+Libre&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Frank+Ruhl+Libre:wght@500&display=swap');
 
 *,
 *::before,
@@ -13,6 +14,8 @@
     --secondary: #dedede;
     --header: rgba(222, 222, 222, 1);
     --logo-red: #b41c1b;
+    --red-hover: #c31d1d;
+    --button-text: #F4F4F4;
     --header-spacing: max(1rem, 1.5vw);
 }
 
@@ -42,6 +45,10 @@ body {
     margin-top: 0 !important;
 }
 
+.center {
+    text-align: center;
+}
+
 h1 {
     font-size: max(3rem, 2vw);
     margin: 1rem;
@@ -58,6 +65,12 @@ h2 {
 
 a {
     text-decoration: none;
+    color: var(--logo-red)
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--red-hover)
 }
 
 p {
@@ -120,19 +133,22 @@ p {
     text-decoration: none;
 }
 
-.apply-button {
+button {
     background-color: var(--logo-red);
-    color: #F4F4F4;
+    color: var(--button-text);
     font-family: 'Expletus Sans', cursive;
-    border-radius: 13px;
     border-width: 0;
+}
+
+.apply-button {
+    border-radius: 13px;
     font-size: max(1.2rem, 1vw);
     height: max(2rem, 1.5vw);
     width: max(90px, 4.5vw);
 }
 
-.apply-button:hover {
-    background-color: hsl(0, 74%, 44%);
+button:hover {
+    background-color: var(--red-hover);
     color: #ffffff;
     cursor: pointer;
 }
