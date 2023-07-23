@@ -64,7 +64,7 @@
     margin-right: 1.5vw;
 }
 
-@media (max-width: 1000px) {
+@media (orientation: portrait) {
 
     .home-img-container {
         height: 100vh;
@@ -122,3 +122,5 @@
 
     }
 }
+
+@media (max-width: 1000px) {}
