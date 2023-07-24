@@ -70,18 +70,6 @@ span {
         font-size: x-large;
     }
 
-    h1 {
-        font-size: 2rem
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
 
     .timeline hr {
         display: hidden;

@@ -236,6 +236,22 @@ button:hover {
         --side-margin: 25px;
     }
 
+    h1 {
+        font-size: 2rem
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .75rem;
+    }
+
     .hamburger {
         visibility: visible;
         height: auto;
@@ -246,6 +262,10 @@ button:hover {
         margin-right: var(--side-margin);
         padding: .5rem;
         display: flex;
+    }
+
+    .hamburger img {
+        height: 1.5rem;
     }
 
     .main-header div {
@@ -277,6 +297,8 @@ button:hover {
 
     .main-nav ul li {
         margin: 1rem;
+        margin-top: .75rem;
+        margin-bottom: .75rem;
         text-align: center;
     }
 
