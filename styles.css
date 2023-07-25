@@ -39,7 +39,7 @@ body {
     margin: 0;
     background-color: var(--background);
     font-family: 'Expletus Sans', cursive;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -209,7 +209,7 @@ button:hover {
 }
 
 .footer-name {
-    font-size: x-large;
+    font-size: max(1.4rem, 1.1vw);
     padding-top: 10px;
     font-family: 'Expletus Sans', cursive;
 }
@@ -240,7 +240,6 @@ button:hover {
 }
 
 .footer-contact {
-    font-size: medium;
     font-family: 'Frank Ruhl Libre', serif;
     margin-bottom: 10px;
     line-height: 22px;
@@ -262,7 +261,7 @@ button:hover {
 }
 
 .footer-copyright p {
-    font-size: small;
+    font-size: x-small;
     color: #656565;
     margin: 0;
 }
@@ -271,13 +270,15 @@ button:hover {
 (orientation: portrait) {
     :root {
         --side-margin: 25px;
+        --header-size: 45px;
     }
 
     h1 {
         font-size: 2rem
     }
 
-    h2 {
+    h2,
+    .footer-name {
         font-size: 1.3rem;
     }
 
@@ -306,7 +307,7 @@ button:hover {
     }
 
     .hamburger img {
-        height: 1.5rem;
+        height: 1.2rem;
     }
 
     .main-header div {
@@ -345,6 +346,16 @@ button:hover {
 
     .main-nav ul li a {
         padding: 0;
+    }
+
+    .main-footer ul>li>a {
+
+        font-size: 20px;
+    }
+
+    .footer-contact {
+        font-size: .85rem;
+        line-height: .85rem;
     }
 
 

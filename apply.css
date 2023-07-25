@@ -3,7 +3,7 @@
 }
 
 .application-button {
-    width: min(400px, 70vw);
+    width: min(60vw, 400px);
     height: 80px;
     border-radius: 13px;
     font-size: xx-large;
@@ -66,10 +66,6 @@ span {
 
 @media (max-width: 1200px) {
 
-    .application-button {
-        font-size: x-large;
-    }
-
 
     .timeline hr {
         display: hidden;
@@ -111,4 +107,13 @@ span {
     .timeline li>div>h3 {
         margin: 0;
     }
+}
+
+@media (max-width: 900px),
+(orientation: portrait) {
+    .application-button {
+        font-size: x-large;
+        max-width: 300px;
+    }
+
 }
