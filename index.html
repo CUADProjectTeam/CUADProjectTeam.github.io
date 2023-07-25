@@ -9,7 +9,6 @@
     <link href="about.css" rel="stylesheet">
     <script>document.addEventListener('DOMContentLoaded', function () {
             const root = document.querySelector(':root');
-            const headerColor = getComputedStyle(root).getPropertyValue('--header');
 
             function updateHeaderOpacity() {
                 const scrollPosition = window.scrollY;
@@ -18,11 +17,7 @@
                 const opacity = scrollPosition <= maxScroll ? (scrollPosition / maxScroll) ** 3 : 1;
 
                 document.querySelector('.header-logo').style.opacity = opacity;
-
-                const rgbaColor = headerColor.startsWith('rgba') ? headerColor : `rgba(${parseRGB(headerColor)}, 1)`;
-                root.style.setProperty("--header", `${rgbaColor.substring(0, rgbaColor.lastIndexOf(',') + 1).trim()} ${opacity})`)
-
-
+                root.style.setProperty("--header-opacity", `${opacity}`)
 
                 const backgroundImg = document.querySelector('.home-background');
                 const computedStyle = getComputedStyle(backgroundImg);

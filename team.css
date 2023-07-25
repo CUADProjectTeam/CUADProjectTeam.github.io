@@ -18,6 +18,72 @@
     background-color: var(--secondary);
 }
 
+.subteam-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subteam-members div {
+    display: flex;
+    margin: 1rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.member {
+    flex-direction: column;
+    width: max(15vw, 12rem);
+    margin: 1rem;
+    padding: .75rem;
+    background-color: var(--secondary);
+    font-size: inherit;
+    border-radius: 5px;
+}
+
+.member img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+    overflow: clip;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .25rem;
+}
+
+.member h3,
+h4,
+h5 {
+    margin: .5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+}
+
+.member div {
+    flex-direction: row-reverse;
+    margin: 0;
+    text-align: right;
+}
+
+.member div a {
+    padding-right: calc(.25rem + 5px);
+    padding-bottom: .25rem;
+}
+
+
+.member-linkedin {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+
 @media (max-width: 1000px) {
     .subteam {
         /* display: flex; */
