@@ -7,6 +7,13 @@
 }
 
 .home-background {
+    /* -khtml-transition: transform 0.1s ease;
+    -moz-transition: transform 0.1s ease;
+    -ms-transition: transform 0.1s ease;
+    -o-transition: transform 0.1s ease;
+    -webkit-transition: transform 0.1s ease; */
+    /* transition: transform .01s linear; */
+    background-attachment: fixed;
     --offset: 0px;
     width: 100%;
     min-height: 1vh;
@@ -83,7 +90,7 @@
         height: 110vh;
         width: auto;
         right: -30vh;
-        transform: translateY(var(--offset))
+        transform: translateY(0);
     }
 
     .home-logo-container {
