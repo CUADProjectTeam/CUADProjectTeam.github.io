@@ -64,17 +64,19 @@
             major.textContent = json.major
             person.appendChild(major)
 
-            var linkedin = document.createElement('div')
-            var link = document.createElement('a')
-            var icon = document.createElement('i')
 
-            link.setAttribute('href', json.linkedin)
-            link.setAttribute('target', '_blank')
-            icon.setAttribute('class', 'fa fa-linkedin')
+            if (json.linkedin != "") {
+                var linkedin = document.createElement('div')
+                var link = document.createElement('a')
+                var icon = document.createElement('i')
+                link.setAttribute('href', json.linkedin)
+                link.setAttribute('target', '_blank')
+                icon.setAttribute('class', 'fa fa-linkedin')
 
-            link.appendChild(icon)
-            linkedin.appendChild(link)
-            person.appendChild(linkedin)
+                link.appendChild(icon)
+                linkedin.appendChild(link)
+                person.appendChild(linkedin)
+            }
 
 
             return person

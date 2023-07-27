@@ -73,11 +73,8 @@ h5 {
 }
 
 
-
-
 @media (max-width: 1000px) {
     .subteam {
-        /* display: flex; */
         flex-direction: column;
     }
 
