@@ -32,7 +32,7 @@
     list-style-type: none;
 }
 
-.member {
+.person-card {
     flex-direction: column;
     width: max(15vw, 12rem);
     margin: 1rem;
@@ -42,7 +42,7 @@
     border-radius: 5px;
 }
 
-.member img {
+.person-card img {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     width: 100%;
@@ -52,7 +52,7 @@
     margin-bottom: .25rem;
 }
 
-.member h3,
+.person-card h3,
 h4,
 h5 {
     margin: .5rem;
@@ -61,26 +61,17 @@ h5 {
     text-align: left;
 }
 
-.member div {
+.person-card div {
     flex-direction: row-reverse;
     margin: 0;
     text-align: right;
 }
 
-.member div a {
+.person-card div a {
     padding-right: calc(.25rem + 5px);
     padding-bottom: .25rem;
 }
 
-
-.member-linkedin {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 0;
-    right: 0;
-
-}
 
 
 

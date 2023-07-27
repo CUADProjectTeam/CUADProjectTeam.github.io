@@ -1,0 +1,130 @@
+{
+    "members": [
+        {
+            "team": "Mechanical",
+            "members": [
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                }
+            ]
+        },
+        {
+            "team": "Electrical",
+            "members": [
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                },
+                {
+                    "name": "n1",
+                    "picture": "images/profile.jpg",
+                    "major": "m1",
+                    "linkedin": "https://linkedin.com/link"
+                }
+            ]
+        }
+    ],
+    "alumni": [
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "n1",
+            "picture": "images/profile.jpg",
+            "major": "m1",
+            "linkedin": "https://linkedin.com/link"
+        }
+    ]
+}

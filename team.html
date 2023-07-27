@@ -11,6 +11,77 @@
 
     <title>CUAD</title>
     <link rel="icon" type="favicon" href="/images/CUAD_Logo_Favicon.png">
+    <script>
+        fetch('members.json')
+            .then(response => response.json())
+            .then(response => generateMembers(response))
+
+
+        function generateMembers(json) {
+            members = document.querySelector("#members")
+            alumni = document.querySelector("#alumni")
+
+            json.members.forEach(subteam => {
+                var subteamName = document.createElement('h2')
+                subteamName.textContent = subteam.team
+                subteamMembers = document.createElement('section')
+                subteamMembers.setAttribute('class', 'subteam-members')
+                members.appendChild(subteamName)
+                members.appendChild(subteamMembers)
+                subteam.members.forEach(member => {
+                    subteamMembers.appendChild(generatePersonCard(member))
+                })
+            });
+
+
+            alumns = document.createElement('section')
+            alumns.setAttribute('class', 'subteam-members')
+            alumni.appendChild(alumns)
+
+
+            json.alumni.forEach(alum => {
+                alumns.appendChild(generatePersonCard(alum))
+            });
+
+
+        }
+
+        function generatePersonCard(json) {
+            var person = document.createElement('div')
+            person.setAttribute('class', 'person-card')
+
+
+            if (json.picture == "") { json.picture = "images/default_member_img.jpg" }
+            var picture = document.createElement('img')
+            picture.setAttribute('src', json.picture)
+            person.appendChild(picture)
+
+            var name = document.createElement('h3')
+            name.textContent = json.name
+            person.appendChild(name)
+
+            var major = document.createElement('h4')
+            major.textContent = json.major
+            person.appendChild(major)
+
+            var linkedin = document.createElement('div')
+            var link = document.createElement('a')
+            var icon = document.createElement('i')
+
+            link.setAttribute('href', json.linkedin)
+            link.setAttribute('target', '_blank')
+            icon.setAttribute('class', 'fa fa-linkedin')
+
+            link.appendChild(icon)
+            linkedin.appendChild(link)
+            person.appendChild(linkedin)
+
+
+            return person
+        }
+
+
+    </script>
 
 
 </head>
@@ -101,309 +172,15 @@
     <div class="container center">
         <h1>Members</h1>
         <hr>
-        <h2>Mechanical</h2>
-        <section class="subteam-members">
+        <div id="members">
+        </div>
 
+        <h1>Alumni</h1>
+        <hr>
+        <div id="alumni">
 
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="images/profile.jpg">
-                <h3>Name</h3>
-                <h4>Major</h4>
-                <div>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
+        </div>
 
-
-        </section>
 
     </div>
 
