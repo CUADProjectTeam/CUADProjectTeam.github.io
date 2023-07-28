@@ -12,6 +12,8 @@
     <title>CUAD</title>
     <link rel="icon" type="favicon" href="/images/CUAD_Logo_Favicon.png">
     <script>
+
+        const default_image_path = ""
         fetch('members.json')
             .then(response => response.json())
             .then(response => generateMembers(response))
@@ -51,7 +53,7 @@
             person.setAttribute('class', 'person-card')
 
 
-            if (json.picture == "") { json.picture = "images/default_member_img.jpg" }
+            if (json.picture == "") { json.picture = default_image_path }
             var picture = document.createElement('img')
             picture.setAttribute('src', json.picture)
             person.appendChild(picture)
@@ -166,11 +168,11 @@
 
             </p>
         </div>
-        <img src="images/business.png"> <!--Good god we need a new image for this-->
+        <img src="images/business.jpg">
 
     </section>
 
-<!-- Removing this for now, until we actually take member photos.
+    <!-- Removing this for now, until we actually take member photos.
     <div class="container center">
         <h1>Members</h1>
         <hr>

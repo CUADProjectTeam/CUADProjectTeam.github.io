@@ -45,7 +45,47 @@ themselves.
 
 ## Adding Members to the Website
 
-**To be Written** - Instructions go here
+To add members to the website, all you have to do is add their photos to the correct directory,
+```images/Member-Profile-Pictures/Current``` and then update *members.json*, the most basic
+part of the json is a person card, it looks like this
+```json
+{
+    "name": "The Person's Name",
+    "picture": "The link to their image, or the empty string if no image exists",
+    "major": "The person's major, or Undecided",
+    "linkedin": "The link to the person's linked in. It MUST have the https:// but if you just copy paste from their profile then it will"
+}
+```
+Also, if the person doesn't have a linkedin, you can just put the empty string and it will omit the link
+
+The members section is a list of json team objects, these objects are like this
+```json
+{
+    "team": "The Name of the team",
+    "members": [
+        {
+            "name": "Name1",
+            "picture": "images/profile.jpg",
+            "major": "Major1",
+            "linkedin": "https://linkedin.com/link"
+        },
+        {
+            "name": "Name2",
+            "picture": "images/profile.jpg",
+            "major": "Major2",
+            "linkedin": ""
+        }
+    ]
+},
+```
+Where members is a list of all the people on the subteam.
+Finally, the alumni section is just a list of all the people.
+
+So to add new members to the site, just create a person json object as described above and then put it in the list of members for the subteam
+they are on. If more subteams are created (or merged), then you can add/remove a team json object and make sure the people all go to the right
+place.
+
+A default image will need to be added and the path specified in the default_image_path const in team.html
 
 ## Moving Graduates to the Alumni Section
 
@@ -117,7 +157,8 @@ is still there. Either way, the world isn't out to get you. Unless it's
 obviously fake or conflicts with data we have, it's safe to take these
 requests at face value. 
 
-**Rest to be written** - Instructions go here
+To move people to the alumni section, you should just have to move their object from the subteam
+they were a part of to the alumni section.
 
 Do your best to put Alumni in order of graduation year, and if they can then
 further be sorted by team even better. But, just by graduation year is fine.
@@ -128,6 +169,8 @@ further be sorted by team even better. But, just by graduation year is fine.
 - [ ] Insert Alumni information
 - [ ] Fix link to application
 - [ ] Placeholder projects.html? (What do we do with this?)
+- [ ] Fix parallax scrolling
+- [ ] Adde default member photo for missing images
 
 Of course, make sure to check in with your lead to see if anything else needs
 to be accomplished with the website. 
