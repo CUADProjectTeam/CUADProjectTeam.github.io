@@ -65,7 +65,6 @@
     border-radius: 10px;
     background-color: var(--secondary);
     flex: 1 1 0;
-    min-height: 100%;
     margin-right: 1.5vw;
 }
 
@@ -134,12 +133,7 @@
 
     .about-box {
         flex-grow: 0;
-        height: fit-content !important;
         margin-top: 1rem;
         flex: none;
-        min-height: 0;
-
     }
 }
-
-@media (max-width: 1000px) {}
