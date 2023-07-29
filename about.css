@@ -7,12 +7,6 @@
 }
 
 .home-background {
-    /* -khtml-transition: transform 0.1s ease;
-    -moz-transition: transform 0.1s ease;
-    -ms-transition: transform 0.1s ease;
-    -o-transition: transform 0.1s ease;
-    -webkit-transition: transform 0.1s ease; */
-    /* transition: transform .01s linear; */
     background-attachment: fixed;
     --offset: 0px;
     width: 100%;
@@ -25,9 +19,10 @@
     flex-direction: column;
     position: absolute;
     top: 15vw;
-    right: 9vw;
+    right: 7vw;
     font-size: 2vw;
     margin: .75rem;
+    margin-left: 1vw;
 }
 
 .home-logo {
@@ -97,7 +92,7 @@
         flex-direction: column;
         position: absolute;
         top: 35vh;
-        right: 2vw;
+        right: .75vw;
         font-size: 1.8vh;
     }
 

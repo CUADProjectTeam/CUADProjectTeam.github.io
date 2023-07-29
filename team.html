@@ -11,8 +11,7 @@
 
     <title>CUAD</title>
     <link rel="icon" type="favicon" href="/images/CUAD_Logo_Favicon.png">
-    <script>
-
+    <script defer>
         const default_image_path = ""
         fetch('members.json')
             .then(response => response.json())
@@ -24,7 +23,7 @@
             alumni = document.querySelector("#alumni")
 
             json.members.forEach(subteam => {
-                var subteamName = document.createElement('h2')
+                let subteamName = document.createElement('h2')
                 subteamName.textContent = subteam.team
                 subteamMembers = document.createElement('section')
                 subteamMembers.setAttribute('class', 'subteam-members')
@@ -49,28 +48,28 @@
         }
 
         function generatePersonCard(json) {
-            var person = document.createElement('div')
+            let person = document.createElement('div')
             person.setAttribute('class', 'person-card')
 
 
             if (json.picture == "") { json.picture = default_image_path }
-            var picture = document.createElement('img')
+            let picture = document.createElement('img')
             picture.setAttribute('src', json.picture)
             person.appendChild(picture)
 
-            var name = document.createElement('h3')
+            let name = document.createElement('h3')
             name.textContent = json.name
             person.appendChild(name)
 
-            var major = document.createElement('h4')
+            let major = document.createElement('h4')
             major.textContent = json.major
             person.appendChild(major)
 
 
             if (json.linkedin != "") {
-                var linkedin = document.createElement('div')
-                var link = document.createElement('a')
-                var icon = document.createElement('i')
+                let linkedin = document.createElement('div')
+                let link = document.createElement('a')
+                let icon = document.createElement('i')
                 link.setAttribute('href', json.linkedin)
                 link.setAttribute('target', '_blank')
                 icon.setAttribute('class', 'fa fa-linkedin')
@@ -172,7 +171,7 @@
 
     </section>
 
-    <!-- Removing this for now, until we actually take member photos.
+    <!-- Removing this for now, until we actually take member photos. 
     <div class="container center">
         <h1>Members</h1>
         <hr>
@@ -186,13 +185,13 @@
         </div>
 
 
-    </div>
+    </div> -->
 
--->
+
 
     <footer class="main-footer">
         <div class="footer-name">
-            Cornell University Autonomous Drone
+            CUAutoDrone
         </div>
         <ul>
             <li>

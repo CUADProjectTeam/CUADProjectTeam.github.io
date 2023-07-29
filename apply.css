@@ -58,6 +58,10 @@ span {
     word-break: break-word;
 }
 
+.timeline ul>li>img {
+    user-select: none;
+}
+
 
 .faqs {
     margin-top: 4rem;
