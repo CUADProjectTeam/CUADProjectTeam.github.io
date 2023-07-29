@@ -170,7 +170,7 @@ further be sorted by team even better. But, just by graduation year is fine.
 - [ ] Fix link to application
 - [ ] Placeholder projects.html? (What do we do with this?)
 - [ ] Fix parallax scrolling
-- [ ] Adde default member photo for missing images
+- [ ] Add default member photo for missing images
 
 Of course, make sure to check in with your lead to see if anything else needs
 to be accomplished with the website. 
@@ -219,12 +219,7 @@ all of your efforts and hard work.
 
 Website designed by JT Klenke.
 
-Readme written by Santiago Blaumann. 
+Readme written by Santiago Blaumann.
+Instructions for adding members and alumns by JT Klenke.
 
-Last modified 7/27/23 by Santiago Blaumann
-
-
-
-
-
-
+Last modified 7/28/23 by JT Klenke
