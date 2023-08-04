@@ -27,7 +27,7 @@
 
 .home-logo {
     width: 15vw;
-    transform: translate(-1.2vw, .75vw);
+    transform: translate(-1vw, .25vw);
 }
 
 
@@ -97,7 +97,7 @@
 
     .home-logo {
         width: 20vh;
-        transform: translate(-1.2vh, .75vh);
+        transform: translate(-1.4vh, 0);
     }
 
 

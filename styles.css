@@ -139,7 +139,6 @@ p {
 .header-logo img {
     height: calc(var(--header-size) - 2px);
     padding-top: 2px;
-    padding-left: 10px;
 }
 
 .main-nav {
