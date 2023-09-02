@@ -107,7 +107,7 @@ For starters, move the member's image from
 to
 ```images/Member-Profile-Pictures/Alumni```
 
-**Rest to be Written** - Instructions go here
+Then just edit the json to reflect the change in image path and then move it from the subteam to the alumni section
 
 ### CUAD History Lesson
 
