@@ -41,6 +41,12 @@
 }
 
 
+
+.about-section img {
+    max-width: 40vw;
+    object-fit: cover;
+}
+
 .about-info {
     display: flex;
     flex-direction: column;
@@ -107,13 +113,13 @@
     }
 
 
-/* 
+
     .about-section img {
         max-width: 100%;
         width: 100%;
         height: 40vw;
         object-position: 0 55%;
-    } */
+    }
 
     .about-boxes {
         flex-direction: column;
