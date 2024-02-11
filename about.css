@@ -43,6 +43,7 @@
 
 .about-section img {
     max-width: 40%;
+    height: auto;
 }
 
 .about-info {
