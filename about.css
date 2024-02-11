@@ -32,7 +32,6 @@
 
 
 
-
 .about-section {
     padding-top: max(20px, 1.5vw);
     padding-bottom: 40px;
@@ -43,8 +42,7 @@
 
 
 .about-section img {
-    max-width: 40vw;
-    object-fit: cover;
+    max-width: 40%;
 }
 
 .about-info {
