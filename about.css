@@ -37,13 +37,16 @@
     padding-bottom: 40px;
     display: flex;
     flex-direction: row;
+    vertical-align: auto;
 }
 
 
 
 .about-section img {
-    max-width: 55vw;
-   
+    align-content: center;
+    padding: 2.5%;
+    width: 95%;
+    height: 50%;
 }
 
 .about-info {
