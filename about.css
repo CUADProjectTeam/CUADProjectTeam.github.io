@@ -43,11 +43,13 @@
 
 
 .about-section img {
-    align-content: center;
-    padding: 2.5%;
-    width: 95%;
-    height: 50%;
+    max-width: 75%; /* Ensures the image is never wider than its container */
+    height: auto; /* Maintains the aspect ratio */
+    padding: 2.5%; /* Retains the padding as per your initial style */
+    display: block; /* Ensures the image doesn't inline with other content */
+    margin: 0 auto; /* Centers the image within its container */
 }
+
 
 .about-info {
     display: flex;
