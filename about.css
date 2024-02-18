@@ -119,11 +119,13 @@
 
 
     .about-section img {
-        max-width: 100%;
-        width: 100%;
-        height: 40vw;
-        object-position: 0 55%;
+        max-width: 100%; /* Allow the image to fill the container */
+        padding: 1%; /* Reduce padding to give more space for the image */
+        margin: 0 auto; /* Keep the image centered */
+        border-radius: 4px; /* Optional: adjust the border-radius for mobile if needed */
+        box-shadow: none; /* Optional: you may remove the shadow on mobile if it's too much */
     }
+}
 
     .about-boxes {
         flex-direction: column;
