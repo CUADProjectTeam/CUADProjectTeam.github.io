@@ -162,34 +162,54 @@
     /* ... Other styles ... */
 }
 
-.donation-background {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Adjust height automatically */
-    display: block; /* Ensure the image is a block to fill the width of its container */
-    position: absolute; /* Positioned absolutely within .donation-section */
-    top: 0; /* Align the top edge with the container */
-    left: 0; /* Align the left edge with the container */
-    z-index: 1; /* The image is behind the text content */
-}
+@media (max-width: 768px) {
+    /* ...other mobile styles... */
 
-.donation-text-content {
-    position: absolute; /* Overlay on top of the .donation-background */
-    top: 0; /* Align the top edge with the container */
-    right: 0; /* Align the right edge with the container */
-    bottom: 0; /* Align the bottom edge with the container */
-    left: 0; /* Align the left edge with the container */
-    width: 100%; /* Full width to cover the image */
-    height: 100%; /* Full height to cover the image */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-    text-align: center; /* Center text horizontally */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-    padding: 2rem; /* Add padding inside the box */
-    box-sizing: border-box; /* Include padding and border in the width and height */
-    z-index: 2; /* The text content is above the image */
-}
+    .donation-background,
+    .donation-text-content {
+        position: relative; /* Change both to relative positioning */
+        width: 100%; /* Both take full width */
+        z-index: auto; /* z-index is no longer necessary as they are not overlaying */
+    }
+
+    .donation-text-content {
+        margin-top: 20px; /* Add some space between the image and the text */
+        padding: 1rem; /* Add padding for the text content */
+        box-sizing: border-box; /* Include padding and border in the width and height */
+        background: none; /* No semi-transparent background needed since they are not overlaying */
+    }
+
+    /* Adjust .donation-section to contain the image and text without overlay */
+    .donation-section {
+        display: block; /* Return to block display for natural stacking */
+        margin-top: 10%; /* Adjust the margin as needed */
+    }
+    
+    /* .cta-button remains unchanged */
+
+    /* Adjust the .main-footer if needed */
+    .main-footer {
+        position: relative; /* Position relative to ensure it follows after .donation-section */
+        z-index: auto; /* Reset z-index to auto */
+        margin-top: 20px; /* Add space between content and footer if needed */
+    }
+    
+    /* Ensure the text content wraps correctly */
+    .text-content {
+        width: auto; /* Allow it to take natural width */
+        max-width: 100%; /* Limit width to 100% of the parent */
+        padding: 0 10px; /* Add padding on the sides */
+    }
+
+    /* Ensure buttons are properly styled for mobile */
+    .cta-button {
+        width: auto; /* Reset width to be automatic */
+        padding: 10px 20px; /* Maintain padding */
+        margin: 10px auto; /* Center the button and add margin */
+        display: block; /* Block display to allow width and margin auto to work */
+    }
+
+
 
 /* Adjustments for the call-to-action button */
 /* Ensure the main-footer is not overlapping */
@@ -210,14 +230,7 @@
         max-width: 100%; /* Use the full width of the screen */
         text-align: center; /* Center align the text */
     }
-    .donation-text-content {
-        position: relative; /* Change position to relative */
-        margin:auto;
-        width: auto; /* Allow it to be the width it needs to be */
-        max-width: 100%; /* Use the full width of the screen */
-        text-align: center; /* Center align the text */
-    }
-
+   
     .cta-button {
         margin: 10px 0; /* Add margin on the top and bottom */
     }
@@ -239,7 +252,7 @@
     
     /* Adjust footer to stack items vertically */
     .main-footer {
-    
+       
         display: block; /* Stack icons vertically */
     }
 
@@ -249,5 +262,3 @@
         padding: 10px; /* Add padding */
     }
 }
-
-/* You would continue adding mobile-specific styles as necessary... */
