@@ -75,8 +75,6 @@
 
 @media (orientation: portrait) {
 
-
-
     .home-img-container {
         height: 100vh;
     }
@@ -142,4 +140,3 @@
         margin-top: 1rem;
         flex: none;
     }
-}

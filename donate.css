@@ -137,3 +137,117 @@
 .cta-button:hover {
     background-color: #c3a4a8; /* Darken the button when hovered for effect */
 }
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust this max-width to suit the breakpoint you want */
+
+    .home-logo-container,
+    .donation-text-content {
+        max-width: 100%; /* Allow logo and donation text to use the full width on small screens */
+        align-items: center; /* Center align the items */
+        padding: 0 10px; /* Add padding on the sides */
+    }
+
+    .home-logo {
+        width: 80%; /* Scale down logo size */
+        margin: 0 auto; /* Center logo horizontally */
+    }
+
+    .caption {
+        text-align: center; /* Center align the caption text */
+        font-size: 0.9em; /* Reduce the font size */
+    }
+    .donation-section {
+    position: relative; /* Keeps the position relative for the children elements */
+    /* ... Other styles ... */
+}
+
+.donation-background {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height automatically */
+    display: block; /* Ensure the image is a block to fill the width of its container */
+    position: absolute; /* Positioned absolutely within .donation-section */
+    top: 0; /* Align the top edge with the container */
+    left: 0; /* Align the left edge with the container */
+    z-index: 1; /* The image is behind the text content */
+}
+
+.donation-text-content {
+    position: absolute; /* Overlay on top of the .donation-background */
+    top: 0; /* Align the top edge with the container */
+    right: 0; /* Align the right edge with the container */
+    bottom: 0; /* Align the bottom edge with the container */
+    left: 0; /* Align the left edge with the container */
+    width: 100%; /* Full width to cover the image */
+    height: 100%; /* Full height to cover the image */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text horizontally */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 2rem; /* Add padding inside the box */
+    box-sizing: border-box; /* Include padding and border in the width and height */
+    z-index: 2; /* The text content is above the image */
+}
+
+/* Adjustments for the call-to-action button */
+/* Ensure the main-footer is not overlapping */
+.main-footer {
+    position: relative; /* Position relative to ensure it follows after the .donation-section */
+    
+}
+
+/* Other styles remain unchanged */
+    
+    .text-content{
+        position: relative; /* Change position to relative */
+        transform: none; /* Remove transform */
+        padding: 10px; /* Add padding */
+        top: auto; /* Reset top position */
+        left: auto; /* Reset left position */
+        width: auto; /* Allow it to be the width it needs to be */
+        max-width: 100%; /* Use the full width of the screen */
+        text-align: center; /* Center align the text */
+    }
+    .donation-text-content {
+        position: relative; /* Change position to relative */
+        margin:auto;
+        width: auto; /* Allow it to be the width it needs to be */
+        max-width: 100%; /* Use the full width of the screen */
+        text-align: center; /* Center align the text */
+    }
+
+    .cta-button {
+        margin: 10px 0; /* Add margin on the top and bottom */
+    }
+
+    /* Make the navigation menu full-width and the hamburger menu visible */
+    .main-nav {
+        display: none; /* Hide the navigation menu by default */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+        margin: 0 auto; /* Center the hamburger menu */
+    }
+
+    /* Style adjustments for the header */
+    .main-header {
+        padding: 10px; /* Add some padding */
+    }
+    
+    /* Adjust footer to stack items vertically */
+    .main-footer {
+    
+        display: block; /* Stack icons vertically */
+    }
+
+    .footer-contact,
+    .footer-copyright {
+        text-align: center; /* Center footer text */
+        padding: 10px; /* Add padding */
+    }
+}
+
+/* You would continue adding mobile-specific styles as necessary... */
