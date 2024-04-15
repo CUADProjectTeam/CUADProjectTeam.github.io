@@ -161,7 +161,7 @@
     position: relative; /* Keeps the position relative for the children elements */
     /* ... Other styles ... */
 }
-
+}
 @media (max-width: 768px) {
     /* ...other mobile styles... */
 
