@@ -124,6 +124,8 @@ body, html {
     padding: 20px 0; /* Padding on top and bottom */
 }
 
-
+.footer{
+    padding-top: 20%;
+}
 /* Other styles like .download-button remain unchanged */
 
