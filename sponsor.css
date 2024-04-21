@@ -82,6 +82,8 @@ body, html {
     height: 100%;
     padding: 10px; /* Space around the content */
     margin-right: 20%;
+    text-align: center;
+    
 }
 
 .sponsorship-content {
@@ -96,8 +98,19 @@ body, html {
     max-width: 38%; /* Maximum width of the image container */
     position: relative; /* Relative positioning context for absolutely positioned children */
     transform: translate(-0%, -30%);
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px 0;
 }
-
+.sponsorship-onshape{
+    text-align: center;
+    padding-top: 10%;
+}
+.onshape{
+    width: 40%
+}
 .background-image {
     width: 70%;
     transform: rotate(-10deg) translate(-20%, 0); /* Adjust rotation and position */
@@ -116,16 +129,4 @@ body, html {
     z-index: 1;
 }
 
-.sponsorship-footer {
-    width: 100%; /* Footer takes full width */
-    text-align: center; /* Center the text */
-    position: relative; /* Ensure footer is positioned relative to its normal flow */
-    z-index: 2; /* Above the images */
-    padding: 20px 0; /* Padding on top and bottom */
-}
-
-.footer{
-    padding-top: 20%;
-}
-/* Other styles like .download-button remain unchanged */
 
