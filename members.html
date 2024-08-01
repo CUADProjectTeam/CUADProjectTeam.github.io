@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <link href="team.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <title>CUAD</title>
+    <link rel="icon" type="favicon" href="/images/CUAD_Favicon.svg">
+    <script defer>
+        const default_image_path = ""
+        fetch('members.json')
+            .then(response => response.json())
+            .then(response => generateMembers(response))
+
+
+        function generateMembers(json) {
+            members = document.querySelector("#members")
+            alumni = document.querySelector("#alumni")
+
+            json.members.forEach(subteam => {
+                let subteamName = document.createElement('h2')
+                subteamName.textContent = subteam.team
+                subteamMembers = document.createElement('section')
+                subteamMembers.setAttribute('class', 'subteam-members')
+                members.appendChild(subteamName)
+                members.appendChild(subteamMembers)
+                subteam.members.forEach(member => {
+                    subteamMembers.appendChild(generatePersonCard(member))
+                })
+            });
+
+
+            alumns = document.createElement('section')
+            alumns.setAttribute('class', 'subteam-members')
+            alumni.appendChild(alumns)
+
+
+            json.alumni.forEach(alum => {
+                alumns.appendChild(generatePersonCard(alum))
+            });
+
+
+        }
+
+        function generatePersonCard(json) {
+            let person = document.createElement('div')
+            person.setAttribute('class', 'person-card')
+
+
+            if (json.picture == "") { json.picture = default_image_path }
+            let picture = document.createElement('img')
+            picture.setAttribute('src', json.picture)
+            person.appendChild(picture)
+
+            let name = document.createElement('h3')
+            name.textContent = json.name
+            person.appendChild(name)
+
+            let major = document.createElement('h4')
+            major.textContent = json.major
+            person.appendChild(major)
+
+
+            if (json.linkedin != "") {
+                let linkedin = document.createElement('div')
+                let link = document.createElement('a')
+                let icon = document.createElement('i')
+                link.setAttribute('href', json.linkedin)
+                link.setAttribute('target', '_blank')
+                icon.setAttribute('class', 'fa fa-linkedin')
+
+                link.appendChild(icon)
+                linkedin.appendChild(link)
+                person.appendChild(linkedin)
+            }
+
+            return person
+        }
+
+
+    </script>
+
+
+</head>
