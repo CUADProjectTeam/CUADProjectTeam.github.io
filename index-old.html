@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const root = document.querySelector(':root');
+
+            function updateHeaderOpacity() {
+                const scrollPosition = window.scrollY;
+                const windowWidth = window.innerWidth
+                const maxScroll = windowWidth < 900 ? 300 : windowWidth * .1;
+                const opacity = scrollPosition <= maxScroll ? (scrollPosition / maxScroll) ** 3 : 1;
+
+                document.querySelector('.header-logo').style.opacity = opacity;
+                root.style.setProperty("--header-opacity", `${opacity}`)
+
+                const backgroundImg = document.querySelector('.home-background');
+                const computedStyle = getComputedStyle(backgroundImg);
+                const variableValue = computedStyle.getPropertyValue('--offset');
+
+                backgroundImg.style.setProperty('--offset', `${scrollPosition / 2}px`);
+            }
+
+            updateHeaderOpacity()
+            window.addEventListener('scroll', updateHeaderOpacity);
+            window.addEventListener('resize', updateHeaderOpacity);
+        });</script>
+
+    <title>CUAD</title>
+    <script src="script.js"></script>
+    <link rel="icon" type="favicon" href="/images/CUAD_Favicon.svg">
+
+
+</head>
+
+
+
+
+<body>
+
+    <header class="main-header">
+        <a href="#" class="header-logo">
+            <img src="images/CUAD_Logo_Lightmode.svg">
+        </a>
+        <div>
+            <button class="hamburger" onclick="handleDropdown()"><img src="images/hamburger.svg"></button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="smooth-scroll" href="#about">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="sponsor.html">Sponsorship</a></li>
+                    <!--<li><a href="projects.html">Projects</a></li>
+                    removing this for now until we have a use for it-->
+                    <li><button class="apply-button" onclick="window.location.href = 'apply.html';">Apply</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="home-img-container">
+        <img class="home-background" src="images/drone_home.webp">
+        <div class="home-logo-container">
+            <img class="home-logo" src="images/CUAD_Logo_Lightmode.svg">
+            <caption>Exploring the future of robotics
+            </caption>
+        </div>
+    </div>
+
+    <div id="about" class="container home">
+        <section class="about-section">
+            
+            <div class="about-info">
+                <h1>About Us</h1>
+                <p>Founded in 2017, we are a team focused on building both controlled and autonomous drones to compete
+                    in the International
+                    Aerial Robotics Competition. The primary purpose of the IARC is to move the state-of-the-art in
+                    aerial robotics forward
+                    through the creation of significant and useful mission challenges that are considered 'impossible'
+                    at the time that they
+                    are proposed. Through competing in these competitions students gain real life experience for future
+                    success in industry.</p>
+                    <img src="images/DSC_0375.JPG">
+                <div class="about-boxes">
+                    <div class="about-box">
+                        <h2>Community</h2>
+                        <p>We are a team of about 30 members consisting of 4 subteams: Mechanical, Electrical, CS, and
+                            Business.
+                            Each subteam plays a critical role in our ability to compete in the IARC. We meet two times
+                            a week -
+                            one subteam meeting where each subteam will meet individually, and one G-Body meeting with
+                            all
+                            of the subteams present.
+                        </p>
+                        <p>We also regularly do team socials, where the whole team gets together to hang out and pass
+                            the time.
+                        </p>
+                        <p>We are not only a team of engineers, but also a group of friends working towards one common
+                            goal of
+                            competing in the IARC competition.
+                        </p>
+                    </div>
+                    <!-- <div class="about-box">
+                        <h2>Mission</h2>
+                        <p></p>
+                    </div> -->
+                    <div class="about-box">
+                        <h2>Competition</h2>
+                        <!-- <p>The current Mission 9 challenges teams to demonstrate new behaviors that have never before
+                            been attempted in any of the past IARC missions. Teams must create drones which can navigate
+                            fully autonomously, identify a target on a moving platform, manipulate objects mid flight,
+                            read text in russian, and speed through a 4 mile distance all in 9 minutes. Check out the
+                            video on their website for a real life demonstration from the past 2017 competition.</p> -->
+
+                            <p>The Mission 9 challenge has been completed. As a result, we will 
+                                now redirect our attention towards Mission 10. More information regarding Mission 10 
+                                is expected to be revealed later this year. 
+                            </p>
+                        <p> For more information, check out their website:
+                            <a href="http://www.aerialroboticscompetition.org/">International Aerial Robotics
+                                Competition</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-name">
+            CUAutoDrone
+        </div>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/company/cu-auto-drone/"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/cuautodrone"><i class="fa fa-instagram"></i></a>
+            </li>
+            <!-- <li>
+                <a href="https://www.facebook.com/AerialRoboticsCornellUniversity/"><i class="fa fa-facebook"></i></a>
+            </li> -->
+            <li>
+                <a href="https://github.com/cuautodrone"><i class="fa fa-github"></i></a>
+            </li>
+        </ul>
+        <div class="footer-contact">
+            For Questions & Sponsorship Inquires <br>
+            Contact
+            <a class="footer-email" href="mailto:cuautodrone@gmail.com">cuautodrone@gmail.com</a>
+            <p>Registered Student Organization of Cornell University</p>
+        </div>
+        <div class="footer-copyright">
+            <p>Registered Student Organization of Cornell University. © Copyright CUAD 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
